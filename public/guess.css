@@ -1,0 +1,78 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.guessField {
+    width: 150px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.guessSubmit,
+.restartBtn {
+    background-color: #FFD166;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.guessSubmit:hover,
+.restartBtn:hover {
+    background-color: #FFB703;
+}
+
+.result {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    min-height: 1.5rem;
+}
+
+.count {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.guesses {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #ffe8a9;
+}

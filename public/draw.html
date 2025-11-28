@@ -1,0 +1,20 @@
+<head>
+    <meta charset="utf-8">
+    <script src="draw.js" defer></script>
+</head>
+<body>
+    <canvas id="canvas" width='1912' height='800'></canvas>
+    <div>
+    顏色：<input id="color" type="color">
+    粗細：<input id="lineWidth" type="range" min="1" max="20" step="1" />
+    <p>Value: <output id="value"></output></p>
+    </div>
+    <button id='toshow'>產生圖片</button>
+    <button id='clear'>清除</button>
+    <button id="eraser">橡皮擦</button>
+    <button id="undo">復原</button>
+    <button id="redo">取消復原</button>
+
+    <br><img id='show'>
+
+</body>
