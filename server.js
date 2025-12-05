@@ -5,7 +5,7 @@ const path = require('path'); // (新) 載入 path 模組
 const dbConfig = require('./db-config');
 // --- 2. 建立 Express 應用程式和連線 ---
 const app = express();
-const port = 3000;
+const port = 80;
 const connection = mysql.createConnection(dbConfig);
 
 // --- 3. 設定 Express 中介軟體 (Middleware) ---
