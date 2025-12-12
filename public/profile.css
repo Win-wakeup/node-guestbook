@@ -1,0 +1,129 @@
+/* ===== 全域設定 ===== */
+body {
+    font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+    background-color: #f0f2f5; /* FB 淺灰背景 */
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    padding-top: 50px; /* 上方留點空間 */
+    margin: 0;
+    color: #1c1e21;
+}
+
+/* ===== 卡片本體 ===== */
+.card {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* 更立體的浮動效果 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* ===== 頭部區域 ===== */
+.header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #1877f2; /* 藍色邊框 */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.bio {
+    color: #65676b;
+    font-size: 14px;
+}
+
+/* ===== 數據統計區 ===== */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 朋友數左右留白 */
+    margin: 20px 0;
+    font-weight: bold;
+    color: #1877f2;
+}
+
+/* ===== 貼文列表 ===== */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-item {
+    background: #f7f7f7;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.post-item:hover {
+    background-color: #e6e6e6;
+}
+
+/* ===== 無貼文提示 ===== */
+.no-posts {
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* ===== 分隔線 ===== */
+hr {
+    border: none;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* ===== 回首頁連結 ===== */
+.back-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #1877f2;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: white;
+    background-color: #1877f2;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===== 響應式 ===== */
+@media (max-width: 500px) {
+    .card {
+        width: 95%;
+        padding: 20px;
+    }
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+    .name {
+        font-size: 20px;
+    }
+}

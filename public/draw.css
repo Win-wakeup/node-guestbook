@@ -1,48 +1,15 @@
-/* --- 全頁背景與排版 --- */
 body {
     font-family: "Microsoft JhengHei", sans-serif;
     background: linear-gradient(135deg, #74ABE2, #5563DE);
     display: flex;
-    flex-direction: column;     /* 讓 topnav 在上，內容在下 */
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     margin: 0;
     color: #fff;
 }
 
-/* --- 固定在最上方的導覽列 --- */
-.topnav {
-    width: 100%;
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;     /* 固定在頂部 */
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-/* 導覽列中的連結樣式 */
-.topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-}
-
-/* --- 中央的容器（猜數字遊戲） --- */
 .container {
-    margin-top: 90px;           /* 留出空間給固定的導覽列 */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     padding: 2rem 3rem;
@@ -109,6 +76,36 @@ label {
     margin-top: 0.5rem;
     color: #ffe8a9;
 }
-body {
-    padding-top: 300px;   /* 讓內容往下移 60px，可自行調整 */
+/* Add a black background color to the top navigation */
+/* --- 固定在最上方的導覽列 --- */
+.topnav {
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;     /* 固定在頂部 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }

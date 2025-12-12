@@ -1,0 +1,102 @@
+/* ===== 全域設定 ===== */
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* ===== 卡片容器 ===== */
+.card {
+    background: white;
+    margin-top: 50px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* ===== 搜尋表單 ===== */
+input[type="text"] {
+    width: 80%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 5px rgba(24,119,242,0.5);
+}
+
+button {
+    padding: 10px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #145dbf;
+    transform: translateY(-2px);
+}
+
+p {
+    margin-top: 20px;
+    color: #555;
+    font-size: 14px;
+}
+
+/* ===== 搜尋歷史建議列表 ===== */
+.suggestions {
+    text-align: left;
+    max-width: 320px;
+    margin: 0 auto 15px auto;
+    padding: 0;
+    list-style: none;
+}
+
+.suggestions li {
+    background: #f1f1f1;
+    margin-bottom: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestions li:hover {
+    background-color: #dbe4ff;
+}
+
+/* ===== 響應式 ===== */
+@media (max-width: 500px) {
+    .card {
+        padding: 30px 20px;
+    }
+    input[type="text"] {
+        width: 100%;
+    }
+    .suggestions {
+        max-width: 90%;
+    }
+}

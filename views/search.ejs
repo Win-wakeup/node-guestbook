@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB 搜尋首頁</title>
+    <link rel="stylesheet" href="/search.css">
+</head>
+<body>
+    <div class="card">
+        <h1>🔍 尋找你的好友</h1>
+
+        <form action="/search" method="GET" id="searchForm">
+            <input type="text" name="keyword" id="keyword" placeholder="輸入 ID (例: jay)" autocomplete="off" required>
+            <button type="submit">搜尋</button>
+        </form>
+
+        <ul class="suggestions" id="suggestions">
+            <!-- 搜尋建議會由 JS 動態生成 -->
+        </ul>
+
+        <p>試試看搜尋：lee, ming, jay</p>
+    </div>
+
+    <script>
+        // 預設的搜尋歷史建議
+        const historyKeywords = ["lee", "ming", "jay"];
+
+        const input = document.getElementById("keyword");
+        const suggestionList = document.getElementById("suggestions");
+
+        // 當使用者輸入文字時，動態顯示建議
+        input.addEventListener("input", () => {
+            const value = input.value.toLowerCase();
+            suggestionList.innerHTML = "";
+
+            if (value === "") return;
+
+            const filtered = historyKeywords.filter(k => k.toLowerCase().startsWith(value));
+            filtered.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                li.addEventListener("click", () => {
+                    input.value = item;
+                    suggestionList.innerHTML = "";
+                });
+                suggestionList.appendChild(li);
+            });
+        });
+
+        // 點擊表單送出時，清空建議列表
+        document.getElementById("searchForm").addEventListener("submit", () => {
+            suggestionList.innerHTML = "";
+        });
+    </script>
+</body>
+</html>
